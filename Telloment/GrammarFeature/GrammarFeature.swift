@@ -30,12 +30,11 @@ class GrammarFeature {
     func checkGrammar(textToCheck: String, onResponsed: @escaping (String) -> Void) {
         AF.request(PNU_URL,
                         method: .post,
-                        parameters: nil,
-                        encoding: URLEncoding.default,
-                        headers: ["Content-Type": "application/x-www-form-urlencoded",
-                                  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"])
+                   parameters: ["text1": textToCheck],
+                        encoding: URLEncoding.default)
                 .validate(statusCode: 200..<300)
                 .responseString { response in
+                    print(response.result)
                     guard let res = response.value else {
                         return
                     }
