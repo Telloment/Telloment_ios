@@ -16,6 +16,7 @@
 		1315265D2BC014C90063DCC7 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1315265C2BC014C90063DCC7 /* TempViewController.swift */; };
 		733B39FD2BBFF18E00214797 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B39FC2BBFF18E00214797 /* TextToSpeech.swift */; };
 		733B39FF2BBFF1A600214797 /* SpeechToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B39FE2BBFF1A600214797 /* SpeechToText.swift */; };
+		73B580BD2BC3A09B007B04F5 /* GrammarFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B580BC2BC3A09B007B04F5 /* GrammarFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1315265C2BC014C90063DCC7 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		733B39FC2BBFF18E00214797 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		733B39FE2BBFF1A600214797 /* SpeechToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToText.swift; sourceTree = "<group>"; };
+		73B580BC2BC3A09B007B04F5 /* GrammarFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		131526432BBE6BAB0063DCC7 /* Telloment */ = {
 			isa = PBXGroup;
 			children = (
+				73B580BB2BC3A043007B04F5 /* GrammarFeature */,
 				733B39FB2BBFF14800214797 /* SpeechFeature */,
 				131526442BBE6BAB0063DCC7 /* AppDelegate.swift */,
 				131526462BBE6BAB0063DCC7 /* SceneDelegate.swift */,
@@ -82,6 +85,14 @@
 				733B39FE2BBFF1A600214797 /* SpeechToText.swift */,
 			);
 			path = SpeechFeature;
+			sourceTree = "<group>";
+		};
+		73B580BB2BC3A043007B04F5 /* GrammarFeature */ = {
+			isa = PBXGroup;
+			children = (
+				73B580BC2BC3A09B007B04F5 /* GrammarFeature.swift */,
+			);
+			path = GrammarFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 				131526492BBE6BAB0063DCC7 /* ViewController.swift in Sources */,
 				733B39FD2BBFF18E00214797 /* TextToSpeech.swift in Sources */,
 				1315265D2BC014C90063DCC7 /* TempViewController.swift in Sources */,
+				73B580BD2BC3A09B007B04F5 /* GrammarFeature.swift in Sources */,
 				131526452BBE6BAB0063DCC7 /* AppDelegate.swift in Sources */,
 				733B39FF2BBFF1A600214797 /* SpeechToText.swift in Sources */,
 				131526472BBE6BAB0063DCC7 /* SceneDelegate.swift in Sources */,
