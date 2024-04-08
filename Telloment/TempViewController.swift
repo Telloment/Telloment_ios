@@ -9,12 +9,16 @@ import UIKit
 
 class TempViewController:UIViewController{
     
+    let grammarFeature = GrammarFeature()
     @IBOutlet weak var GrammarTextField: UITextField!
     
     
     @IBAction func GrammarButtonTapped(_ sender: Any) {
         
-        GrammarTextField.text = "이 문장으로 변경"
+        grammarFeature.getTest { result in
+            self.GrammarTextField.text = result.title
+        }
+        
         
     }
     

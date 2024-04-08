@@ -17,6 +17,7 @@
 		733B39FD2BBFF18E00214797 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B39FC2BBFF18E00214797 /* TextToSpeech.swift */; };
 		733B39FF2BBFF1A600214797 /* SpeechToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B39FE2BBFF1A600214797 /* SpeechToText.swift */; };
 		73B580BD2BC3A09B007B04F5 /* GrammarFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B580BC2BC3A09B007B04F5 /* GrammarFeature.swift */; };
+		F1622496DA05AB04BA2504DD /* Pods_Telloment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACC2EE4522B0527CD26B416 /* Pods_Telloment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +30,12 @@
 		131526502BBE6BAB0063DCC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		131526522BBE6BAB0063DCC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1315265C2BC014C90063DCC7 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		2AC2DFC4443117339CF7D7D6 /* Pods-Telloment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telloment.debug.xcconfig"; path = "Target Support Files/Pods-Telloment/Pods-Telloment.debug.xcconfig"; sourceTree = "<group>"; };
 		733B39FC2BBFF18E00214797 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		733B39FE2BBFF1A600214797 /* SpeechToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToText.swift; sourceTree = "<group>"; };
 		73B580BC2BC3A09B007B04F5 /* GrammarFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarFeature.swift; sourceTree = "<group>"; };
+		91F1262C5FC224693C228B95 /* Pods-Telloment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telloment.release.xcconfig"; path = "Target Support Files/Pods-Telloment/Pods-Telloment.release.xcconfig"; sourceTree = "<group>"; };
+		9ACC2EE4522B0527CD26B416 /* Pods_Telloment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telloment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1622496DA05AB04BA2504DD /* Pods_Telloment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,8 @@
 			children = (
 				131526432BBE6BAB0063DCC7 /* Telloment */,
 				131526422BBE6BAB0063DCC7 /* Products */,
+				BC97C480B026A50B474CF613 /* Pods */,
+				78E18F0102E845EDA81D1CC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,8 @@
 		131526432BBE6BAB0063DCC7 /* Telloment */ = {
 			isa = PBXGroup;
 			children = (
+				738B61FD2BC3AEA200E45E3B /* Dto */,
+				738B61FC2BC3AE7E00E45E3B /* Dtos */,
 				73B580BB2BC3A043007B04F5 /* GrammarFeature */,
 				733B39FB2BBFF14800214797 /* SpeechFeature */,
 				131526442BBE6BAB0063DCC7 /* AppDelegate.swift */,
@@ -87,12 +96,43 @@
 			path = SpeechFeature;
 			sourceTree = "<group>";
 		};
+		738B61FC2BC3AE7E00E45E3B /* Dtos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dtos;
+			sourceTree = "<group>";
+		};
+		738B61FD2BC3AEA200E45E3B /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
 		73B580BB2BC3A043007B04F5 /* GrammarFeature */ = {
 			isa = PBXGroup;
 			children = (
 				73B580BC2BC3A09B007B04F5 /* GrammarFeature.swift */,
 			);
 			path = GrammarFeature;
+			sourceTree = "<group>";
+		};
+		78E18F0102E845EDA81D1CC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9ACC2EE4522B0527CD26B416 /* Pods_Telloment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC97C480B026A50B474CF613 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2DFC4443117339CF7D7D6 /* Pods-Telloment.debug.xcconfig */,
+				91F1262C5FC224693C228B95 /* Pods-Telloment.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 131526552BBE6BAB0063DCC7 /* Build configuration list for PBXNativeTarget "Telloment" */;
 			buildPhases = (
+				F83F8FEC806517B4300171F5 /* [CP] Check Pods Manifest.lock */,
 				1315263D2BBE6BAA0063DCC7 /* Sources */,
 				1315263E2BBE6BAA0063DCC7 /* Frameworks */,
 				1315263F2BBE6BAA0063DCC7 /* Resources */,
+				3B658A49E439D685797C0728 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +202,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B658A49E439D685797C0728 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Telloment/Pods-Telloment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Telloment/Pods-Telloment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Telloment/Pods-Telloment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F83F8FEC806517B4300171F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Telloment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1315263D2BBE6BAA0063DCC7 /* Sources */ = {
@@ -235,7 +319,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -298,7 +382,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -319,6 +403,7 @@
 		};
 		131526562BBE6BAB0063DCC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AC2DFC4443117339CF7D7D6 /* Pods-Telloment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +432,7 @@
 		};
 		131526572BBE6BAB0063DCC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91F1262C5FC224693C228B95 /* Pods-Telloment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
