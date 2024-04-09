@@ -33,11 +33,12 @@ class GrammarFeature {
             responses.flatMap { response in
                 response.errInfo
             }.forEach { err in
-                let startIndex = textToCheck.index(textToCheck.startIndex, offsetBy: err.start + offset)
-                let endIndex = textToCheck.index(textToCheck.startIndex, offsetBy: err.end + offset)
+                let candword = err.candWord.split(separator: "|")[0]
+                let startIndex = res.index(res.startIndex, offsetBy: err.start + offset)
+                let endIndex = res.index(res.startIndex, offsetBy: err.end + offset)
                 let range = startIndex..<endIndex
-                offset = offset + (err.candWord.count - (err.end - err.start))
-                res.replaceSubrange(range, with: err.candWord)
+                offset = offset + (candword.count - (err.end - err.start))
+                res.replaceSubrange(range, with: candword)
             }
             onResponded(res)
         }
