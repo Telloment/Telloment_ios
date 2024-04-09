@@ -18,6 +18,7 @@
 		733B39FF2BBFF1A600214797 /* SpeechToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B39FE2BBFF1A600214797 /* SpeechToText.swift */; };
 		73A194332BC4F4B900C325BF /* PNUCheckerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A194322BC4F4B900C325BF /* PNUCheckerResponse.swift */; };
 		73A194362BC4F53300C325BF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A194352BC4F53300C325BF /* StringExtensions.swift */; };
+		73A194392BC5056500C325BF /* PNUGrammerChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A194382BC5056500C325BF /* PNUGrammerChecker.swift */; };
 		73B580BD2BC3A09B007B04F5 /* GrammarFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B580BC2BC3A09B007B04F5 /* GrammarFeature.swift */; };
 		F1622496DA05AB04BA2504DD /* Pods_Telloment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACC2EE4522B0527CD26B416 /* Pods_Telloment.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		733B39FE2BBFF1A600214797 /* SpeechToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToText.swift; sourceTree = "<group>"; };
 		73A194322BC4F4B900C325BF /* PNUCheckerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNUCheckerResponse.swift; sourceTree = "<group>"; };
 		73A194352BC4F53300C325BF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		73A194382BC5056500C325BF /* PNUGrammerChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNUGrammerChecker.swift; sourceTree = "<group>"; };
 		73B580BC2BC3A09B007B04F5 /* GrammarFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarFeature.swift; sourceTree = "<group>"; };
 		91F1262C5FC224693C228B95 /* Pods-Telloment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telloment.release.xcconfig"; path = "Target Support Files/Pods-Telloment/Pods-Telloment.release.xcconfig"; sourceTree = "<group>"; };
 		9ACC2EE4522B0527CD26B416 /* Pods_Telloment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telloment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 		131526432BBE6BAB0063DCC7 /* Telloment */ = {
 			isa = PBXGroup;
 			children = (
+				73A194372BC5053300C325BF /* network */,
 				73A194342BC4F52300C325BF /* extensions */,
 				73B580BB2BC3A043007B04F5 /* GrammarFeature */,
 				733B39FB2BBFF14800214797 /* SpeechFeature */,
@@ -107,11 +110,27 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		73A194372BC5053300C325BF /* network */ = {
+			isa = PBXGroup;
+			children = (
+				73A1943A2BC505B200C325BF /* PNUGrammarChecker */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		73A1943A2BC505B200C325BF /* PNUGrammarChecker */ = {
+			isa = PBXGroup;
+			children = (
+				73A194322BC4F4B900C325BF /* PNUCheckerResponse.swift */,
+				73A194382BC5056500C325BF /* PNUGrammerChecker.swift */,
+			);
+			path = PNUGrammarChecker;
+			sourceTree = "<group>";
+		};
 		73B580BB2BC3A043007B04F5 /* GrammarFeature */ = {
 			isa = PBXGroup;
 			children = (
 				73B580BC2BC3A09B007B04F5 /* GrammarFeature.swift */,
-				73A194322BC4F4B900C325BF /* PNUCheckerResponse.swift */,
 			);
 			path = GrammarFeature;
 			sourceTree = "<group>";
@@ -257,6 +276,7 @@
 				131526452BBE6BAB0063DCC7 /* AppDelegate.swift in Sources */,
 				733B39FF2BBFF1A600214797 /* SpeechToText.swift in Sources */,
 				131526472BBE6BAB0063DCC7 /* SceneDelegate.swift in Sources */,
+				73A194392BC5056500C325BF /* PNUGrammerChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
