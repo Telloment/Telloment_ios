@@ -76,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				73A194342BC4F52300C325BF /* extensions */,
-				738B61FD2BC3AEA200E45E3B /* Dto */,
-				738B61FC2BC3AE7E00E45E3B /* Dtos */,
 				73B580BB2BC3A043007B04F5 /* GrammarFeature */,
 				733B39FB2BBFF14800214797 /* SpeechFeature */,
 				131526442BBE6BAB0063DCC7 /* AppDelegate.swift */,
@@ -99,20 +97,6 @@
 				733B39FE2BBFF1A600214797 /* SpeechToText.swift */,
 			);
 			path = SpeechFeature;
-			sourceTree = "<group>";
-		};
-		738B61FC2BC3AE7E00E45E3B /* Dtos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dtos;
-			sourceTree = "<group>";
-		};
-		738B61FD2BC3AEA200E45E3B /* Dto */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dto;
 			sourceTree = "<group>";
 		};
 		73A194342BC4F52300C325BF /* extensions */ = {
