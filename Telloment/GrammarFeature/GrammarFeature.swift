@@ -27,9 +27,19 @@ class GrammarFeature {
     }
     
     func fixGrammar(textToCheck: String, onResponded: @escaping (String) -> Void) {
-        checkGrammar(textToCheck: <#T##String#>) { responses in
-            
-            
+        var res = textToCheck
+        var offset = 0
+        checkGrammar(textToCheck: textToCheck) { responses in
+            responses.flatMap { response in
+                response.errInfo
+            }.forEach { err in
+                let startIndex = textToCheck.index(textToCheck.startIndex, offsetBy: err.start + offset)
+                let endIndex = textToCheck.index(textToCheck.startIndex, offsetBy: err.end + offset)
+                let range = startIndex..<endIndex
+                offset = offset + (err.candWord.count - (err.end - err.start))
+                res.replaceSubrange(range, with: err.candWord)
+            }
+            onResponded(res)
         }
     }
 

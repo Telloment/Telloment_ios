@@ -15,10 +15,10 @@ class TempViewController:UIViewController{
     
     @IBAction func GrammarButtonTapped(_ sender: Any) {
         
-        grammarFeature.checkGrammar(textToCheck: GrammarTextField.text ?? "") { result in
-            self.GrammarTextField.text =
+        grammarFeature.fixGrammar(textToCheck: GrammarTextField.text ?? "") { result in
+            self.GrammarTextField.text = result
         }
-        
+            
         
     }
     
