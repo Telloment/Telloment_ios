@@ -9,25 +9,9 @@ import Foundation
 import Alamofire
 
 class GrammarFeature {
-    let apiUrl = "https://jsonplaceholder.typicode.com/todos/1"
     let PNU_URL = "http://speller.cs.pusan.ac.kr/results"
 
-    func getTest(onResponsed: @escaping (TestResponse) -> Void) {
-        AF.request(apiUrl,
-                        method: .get,
-                        parameters: nil,
-                        encoding: URLEncoding.default,
-                        headers: ["Content-Type": "application/json", "Accept": "application/json"])
-                .validate(statusCode: 200..<300)
-                .responseDecodable(of: TestResponse.self) { (response) in
-                    guard let res = response.value else {
-                        return
-                    }
-                    onResponsed(res)
-                }
-    }
-
-    func checkGrammar(textToCheck: String, onResponsed: @escaping (String) -> Void) {
+    func checkGrammar(textToCheck: String, onResponsed: @escaping ([PNUCheckerResponse]) -> Void) {
         AF.request(PNU_URL,
                         method: .post,
                    parameters: ["text1": textToCheck],
@@ -41,16 +25,34 @@ class GrammarFeature {
                     onResponsed(self.parseResponse(response: res))
                 }
     }
-
-    private func parseResponse(response: String) -> String {
-        return ""
+    
+    func fixGrammar(textToCheck: String, onResponded: @escaping (String) -> Void) {
+        checkGrammar(textToCheck: <#T##String#>) { responses in
+            
+            
+        }
     }
-}
 
-struct TestResponse: Decodable {
-    var userId: Int
-    var id: Int
-    var title: String
-    var completed: Bool
-
+    private func parseResponse(response: String) -> [PNUCheckerResponse] {
+        let regex = /\tdata = \[.*\]/
+        let res = response.matches(of: regex)
+            .compactMap { matcher -> [PNUCheckerResponse]? in
+                var t = String(response[matcher.range])
+                let start = t.index(t.startIndex, offsetBy: 8)
+                let end = t.index(t.endIndex, offsetBy: 0)
+                t = String(t[start ..< end])
+                t.removingRegexMatches(pattern: "<[^ㄱ-ㅎㅏ-ㅣ가-힣>]+>")
+                if let jsonData = t.data(using: .utf8) {
+                    do {
+                        let dataModels = try JSONDecoder().decode([PNUCheckerResponse].self, from: jsonData)
+                        return dataModels
+                    } catch {
+                        print("Error decoding JSON: \(error)")
+                        return nil
+                    }
+                }
+                return nil
+            }.flatMap {$0}
+        return res
+    }
 }
